@@ -1,0 +1,270 @@
+:root {
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Roboto', sans-serif;
+    --font-ethiopian: 'Noto Sans Ethiopic', sans-serif;
+    --text-color: #2c3e50;
+    --primary-color: #004080;
+    --secondary-color: #5A8AAD;
+    --accent-color: #c0392b;
+    --bg-color: #f8f9fa;
+    --paper-bg: #ffffff;
+    --border-color: #dee2e6;
+    --document-max-width: 900px;
+    --document-padding: 50px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.75;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    margin: 0;
+    padding: 30px 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.export-button-container {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1000;
+}
+
+#exportPdfButton {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1em;
+    font-family: var(--font-body);
+    font-weight: 500;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.2s ease-out, transform 0.1s ease-out;
+}
+#exportPdfButton:active {
+    transform: translateY(1px);
+}
+
+.proposal-document {
+    max-width: var(--document-max-width);
+    margin: 30px auto 50px auto;
+    padding: var(--document-padding);
+    background-color: var(--paper-bg);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border: 1px solid #e0e0e0;
+    border-radius: 3px;
+}
+
+.proposal-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.logo-motto-container {
+    margin-bottom: 25px;
+}
+
+.motto {
+    font-family: var(--font-ethiopian);
+    font-size: 2.2em;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin: 0 0 10px 0;
+    letter-spacing: 1px;
+}
+
+.proposal-header h1 {
+    font-family: var(--font-heading);
+    font-size: 3em;
+    color: var(--primary-color);
+    margin-bottom: 0.25em;
+    font-weight: 900;
+    letter-spacing: -0.5px;
+}
+
+.proposal-header .subtitle {
+    font-family: var(--font-body);
+    font-size: 1.4em;
+    color: #555;
+    margin-top: 0;
+    margin-bottom: 1.8em;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.title-divider {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+    width: 70%;
+    margin: 25px auto;
+}
+
+.header-details {
+    font-size: 0.9em;
+    color: #444;
+    line-height: 1.6;
+}
+.header-details p {
+    margin: 6px 0;
+}
+.header-details strong {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.proposal-content {
+    /* Main content wrapper */
+}
+
+.proposal-section {
+    margin-bottom: 40px; /* Reduced from 50px for tighter flow */
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.proposal-section:last-of-type {
+    border-bottom: none;
+}
+
+.proposal-section h2 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    font-size: 2.2em;
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--secondary-color);
+    display: inline-block;
+    font-weight: 700;
+}
+
+.pillar-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 25px;
+    background-color: #fefefe;
+    border: 1px solid #e9ecef;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.pillar-section h3 {
+    font-family: var(--font-heading);
+    font-size: 1.7em;
+    color: var(--secondary-color);
+    margin-top: 0;
+    margin-bottom: 0.7em;
+    font-weight: 700;
+}
+.pillar-section .tagline {
+    font-family: var(--font-body);
+    font-style: italic;
+    color: #555;
+    font-weight: 500;
+    margin-bottom: 1.2em;
+    font-size: 1.15em;
+    display: block;
+    padding-left: 10px;
+    border-left: 3px solid var(--secondary-color);
+}
+
+p {
+    margin-bottom: 1.2em;
+    text-align: justify;
+    font-weight: 400;
+    font-size: 1.05em;
+}
+
+strong {
+    font-weight: 700;
+}
+
+ul, ol {
+    margin-bottom: 1.2em;
+    padding-left: 25px;
+}
+.proposal-section ul li {
+    margin-bottom: 0.6em;
+}
+.proposal-section ul li::before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+h4 {
+    font-family: var(--font-heading);
+    font-size: 1.3em;
+    color: var(--text-color);
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+}
+
+.proposal-footer {
+    margin-top: 60px;
+    padding-top: 30px;
+    text-align: center;
+}
+.footer-divider {
+    border: 0;
+    height: 1px;
+    background-color: var(--border-color);
+    margin-bottom: 30px;
+}
+.proposal-footer p {
+    font-size: 0.95em;
+    color: #555;
+    margin: 5px 0;
+    text-align: center;
+}
+.proposal-footer strong {
+    color: var(--text-color);
+    font-weight: 500;
+}
+.copyright {
+    margin-top: 20px !important;
+    font-size: 0.85em !important;
+    color: #777 !important;
+}
+
+@media print {
+    body {
+        background-color: var(--paper-bg) !important;
+        padding: 0; margin: 0;
+        color: black !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+    .export-button-container { display: none !important; }
+    .proposal-document {
+        max-width: 100% !important; width: 100% !important;
+        box-shadow: none !important; border: none !important;
+        margin: 0 !important;
+        padding: 20mm 15mm 20mm 20mm !important; /* T, R, B, L */
+        box-sizing: border-box !important;
+        border-radius: 0 !important;
+        font-size: 10pt; line-height: 1.5;
+    }
+    .proposal-section h2 {
+        font-size: 16pt !important;
+        border-bottom: 1px solid black !important;
+        color: black !important;
+    }
+    .pillar-section h3 { font-size: 14pt !important; color: black !important; }
+    p, li, strong { color: black !important; }
+    .proposal-section, .pillar-section { page-break-inside: avoid; }
+    h1, h2, h3, h4 { page-break-after: avoid; }
+}
